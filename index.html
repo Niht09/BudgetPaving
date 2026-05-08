@@ -76,6 +76,46 @@
       background: var(--cloud);
     }
 
+    .section-dark {
+      background: var(--ink);
+      color: var(--white);
+    }
+
+    .section-dark h2,
+    .section-dark .eyebrow,
+    .section-dark .section-head p {
+      color: var(--white);
+    }
+
+    .section-dark .eyebrow::before {
+      background: var(--gold);
+    }
+
+    .faq-dark .faq-item {
+      background: var(--ink-soft);
+      border-color: rgba(255, 255, 255, 0.12);
+      box-shadow: none;
+    }
+
+    .faq-dark .faq-question {
+      background: var(--ink-soft);
+      color: var(--white);
+    }
+
+    .faq-dark .faq-question span:last-child {
+      background: rgba(255, 255, 255, 0.12);
+      color: var(--white);
+    }
+
+    .faq-dark .faq-item.active .faq-question span:last-child {
+      background: var(--gold);
+      color: var(--ink);
+    }
+
+    .faq-dark .faq-answer {
+      color: rgba(255, 255, 255, 0.76);
+    }
+
     .eyebrow {
       display: inline-flex;
       align-items: center;
@@ -213,7 +253,7 @@
     }
 
     .nav {
-      height: 74px;
+      height: 96px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -231,8 +271,8 @@
     }
 
     .logo-wrap img {
-      width: 132px;
-      height: 58px;
+      width: 184px;
+      height: 84px;
       object-fit: contain;
       object-position: left center;
       display: block;
@@ -850,8 +890,8 @@
     }
 
     .footer {
-      background: var(--ink);
-      color: var(--white);
+      background: var(--cloud);
+      color: var(--ink);
       padding: 70px 0 34px;
     }
 
@@ -863,11 +903,11 @@
     }
 
     .footer-logo-wrap {
-      width: 164px;
-      height: 118px;
+      width: 190px;
+      height: 136px;
       margin-bottom: 18px;
-      background: rgba(255, 255, 255, 0.04);
-      border: 1px solid rgba(255, 255, 255, 0.08);
+      background: var(--white);
+      border: 1px solid var(--fog);
       border-radius: var(--radius-md);
       padding: 10px;
       display: flex;
@@ -884,7 +924,7 @@
     }
 
     .footer h3 {
-      color: var(--white);
+      color: var(--ink);
       font-size: 18px;
       margin-bottom: 16px;
       letter-spacing: 0;
@@ -893,7 +933,7 @@
     .footer p,
     .footer a,
     .footer li {
-      color: rgba(255, 255, 255, 0.72);
+      color: var(--charcoal);
       font-size: 15px;
     }
 
@@ -904,13 +944,13 @@
     }
 
     .footer-bottom {
-      border-top: 1px solid rgba(255, 255, 255, 0.12);
+      border-top: 1px solid var(--fog);
       padding-top: 22px;
       display: flex;
       justify-content: space-between;
       gap: 18px;
       flex-wrap: wrap;
-      color: rgba(255, 255, 255, 0.6);
+      color: var(--graphite);
       font-size: 13px;
     }
 
@@ -952,7 +992,7 @@
         position: absolute;
         left: 16px;
         right: 16px;
-        top: 75px;
+        top: 97px;
         display: grid;
         background: var(--white);
         border: 1px solid var(--fog);
@@ -1029,12 +1069,12 @@
       }
 
       .nav {
-        height: 68px;
+        height: 76px;
       }
 
       .logo-wrap img {
-        width: 112px;
-        height: 52px;
+        width: 132px;
+        height: 62px;
       }
 
       .hero {
@@ -1146,7 +1186,7 @@
   <header class="site-header">
     <div class="container nav">
       <a class="logo-wrap" href="#top" aria-label="Budget Paving home">
-        <img src="images/logo.svg" alt="Budget Paving logo" />
+        <img src="images/logo.png" alt="Budget Paving logo" />
       </a>
 
       <nav class="nav-links" id="navLinks" aria-label="Main navigation">
@@ -1498,7 +1538,7 @@
       </div>
     </section>
 
-    <section class="section section-light" id="faq">
+    <section class="section section-dark faq-dark" id="faq">
       <div class="container">
         <div class="section-head">
           <div>
@@ -1543,7 +1583,7 @@
       <div class="footer-grid">
         <div>
           <div class="footer-logo-wrap">
-            <img class="footer-logo" src="images/logo.svg" alt="Budget Paving logo" />
+            <img class="footer-logo" src="images/logo.png" alt="Budget Paving logo" />
           </div>
           <p>Budget Paving provides practical asphalt and concrete paving solutions for homeowners, businesses, acreage owners, and property managers across Edmonton and surrounding Alberta communities.</p>
         </div>
