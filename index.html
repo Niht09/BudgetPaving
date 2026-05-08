@@ -120,100 +120,18 @@
       background: var(--white);
     }
 
-    .location-card {
-      display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 0;
-      background: var(--cloud);
+    .location-map-card {
       border: 1px solid var(--fog);
       border-radius: var(--radius-lg);
       overflow: hidden;
       box-shadow: var(--shadow);
+      background: var(--cloud);
     }
 
-    .map-preview {
-      position: relative;
+    .location-map-card iframe {
+      width: 100%;
       min-height: 420px;
-      background:
-        linear-gradient(90deg, rgba(23,23,23,0.06) 1px, transparent 1px),
-        linear-gradient(rgba(23,23,23,0.06) 1px, transparent 1px),
-        linear-gradient(135deg, #f4f4f4 0%, #ffffff 52%, #e9e9e9 100%);
-      background-size: 54px 54px, 54px 54px, cover;
-      overflow: hidden;
-    }
-
-    .map-preview::before,
-    .map-preview::after {
-      content: "";
-      position: absolute;
-      height: 62px;
-      width: 130%;
-      left: -15%;
-      background: rgba(245, 181, 27, 0.78);
-      transform: rotate(-8deg);
-      top: 45%;
-      border: 10px solid rgba(255, 255, 255, 0.65);
-      box-shadow: 0 12px 28px rgba(23,23,23,0.12);
-    }
-
-    .map-preview::after {
-      width: 92px;
-      height: 130%;
-      left: 54%;
-      top: -15%;
-      transform: rotate(18deg);
-      background: rgba(94, 166, 201, 0.66);
-      border: 8px solid rgba(255, 255, 255, 0.55);
-    }
-
-    .map-pin {
-      position: absolute;
-      inset: 50% auto auto 50%;
-      transform: translate(-50%, -50%);
-      width: 76px;
-      height: 76px;
-      border-radius: 50% 50% 50% 0;
-      rotate: -45deg;
-      background: var(--ink);
-      color: var(--gold);
-      display: grid;
-      place-items: center;
-      font-size: 34px;
-      z-index: 2;
-      box-shadow: var(--shadow-lg);
-    }
-
-    .map-pin::before {
-      content: "";
-      width: 28px;
-      height: 28px;
-      background: var(--white);
-      border-radius: 50%;
-      position: absolute;
-    }
-
-    .map-pin {
-      color: transparent;
-    }
-
-    .location-copy {
-      padding: clamp(28px, 4vw, 48px);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      background: var(--white);
-    }
-
-    .location-copy h3 {
-      font-size: clamp(28px, 3vw, 40px);
-      margin-bottom: 16px;
-    }
-
-    .location-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 28px;
+      display: block;
     }
 
     .eyebrow {
@@ -1157,8 +1075,7 @@
       .section-head,
       .problem-grid,
       .lead-magnet,
-      .cta-band,
-      .location-card {
+      .cta-band {
         grid-template-columns: 1fr;
       }
 
@@ -1273,12 +1190,11 @@
         text-align: left;
       }
 
-      .cta-band .btn,
-      .location-actions .btn {
+      .cta-band .btn {
         width: 100%;
       }
 
-      .map-preview {
+      .location-map-card iframe {
         min-height: 320px;
       }
 
@@ -1719,19 +1635,17 @@
           <p>Use the map section below to open the Budget Paving Google Business location, check directions, and contact the team for asphalt paving estimates in Edmonton and surrounding Alberta areas.</p>
         </div>
 
-        <div class="location-card">
-          <div class="map-preview" role="img" aria-label="Google map preview for Budget Paving location">
-            <div class="map-pin">⌖</div>
-            <div class="map-lines"></div>
-          </div>
-          <div class="location-copy">
-            <h3>Budget Paving Location</h3>
-            <p>Open the Google Maps listing to view directions, business details, reviews, and service area information.</p>
-            <div class="location-actions">
-              <a class="btn btn-primary" href="https://share.google/6IMjVObcrf4zsmocz" target="_blank" rel="noopener">Open Google Map</a>
-              <a class="btn btn-outline" href="tel:+17809457860">Call +1 (780) 945-7860</a>
-            </div>
-          </div>
+        <div class="location-map-card">
+          <iframe
+            title="Budget Paving Google Map - 31 Rayborn Crescent, St. Albert, AB"
+            src="https://www.google.com/maps?q=31%20Rayborn%20Crescent%2C%20St.%20Albert%2C%20AB&output=embed"
+            width="100%"
+            height="420"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
         </div>
       </div>
     </section>
