@@ -1,0 +1,1598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Budget Paving | Asphalt Paving Company in Edmonton</title>
+  <meta name="description" content="Budget Paving provides residential and commercial asphalt paving, driveway paving, parking lot paving, resurfacing, pothole repair, crack sealing, sealcoating, and concrete paving services in Edmonton and surrounding Alberta areas." />
+  <meta name="keywords" content="asphalt paving Edmonton, paving company Edmonton, driveway paving Edmonton, parking lot paving Edmonton, asphalt repair Edmonton, asphalt resurfacing Edmonton, asphalt contractors Edmonton" />
+
+  <style>
+    :root {
+      --gold: #f5b51b;
+      --gold-deep: #d89b08;
+      --blue: #5ea6c9;
+      --ink: #171717;
+      --ink-soft: #2a2a2a;
+      --charcoal: #3d3d3d;
+      --graphite: #636363;
+      --cloud: #f7f7f7;
+      --fog: #e9e9e9;
+      --steel: #c7c7c7;
+      --white: #ffffff;
+      --shadow: 0 2px 12px rgba(23, 23, 23, 0.08);
+      --shadow-lg: 0 12px 36px rgba(23, 23, 23, 0.16);
+      --radius-sm: 4px;
+      --radius-md: 8px;
+      --radius-lg: 16px;
+      --container: 1180px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Inter, Manrope, Arial, sans-serif;
+      color: var(--ink);
+      background: var(--white);
+      line-height: 1.5;
+      overflow-x: hidden;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button,
+    input,
+    textarea,
+    select {
+      font: inherit;
+    }
+
+    .container {
+      width: min(100% - 40px, var(--container));
+      margin-inline: auto;
+    }
+
+    .section {
+      padding: 82px 0;
+    }
+
+    .section-light {
+      background: var(--cloud);
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--charcoal);
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 34px;
+      height: 4px;
+      background: var(--gold);
+      border-radius: 999px;
+    }
+
+    h1,
+    h2,
+    h3 {
+      line-height: 1.02;
+      letter-spacing: -0.035em;
+      color: var(--ink);
+    }
+
+    h1 {
+      font-size: clamp(42px, 6.4vw, 78px);
+      font-weight: 850;
+      max-width: 790px;
+    }
+
+    h2 {
+      font-size: clamp(32px, 4.2vw, 56px);
+      font-weight: 820;
+    }
+
+    h3 {
+      font-size: 23px;
+      font-weight: 800;
+    }
+
+    p {
+      color: var(--charcoal);
+      font-size: 16px;
+    }
+
+    .lead {
+      font-size: clamp(18px, 2vw, 22px);
+      max-width: 710px;
+      color: var(--ink-soft);
+      margin-top: 20px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      padding: 13px 24px;
+      border-radius: var(--radius-sm);
+      font-size: 14px;
+      font-weight: 850;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      border: 1px solid transparent;
+      cursor: pointer;
+      transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+      white-space: nowrap;
+    }
+
+    .btn:hover {
+      transform: translateY(-1px);
+    }
+
+    .btn-primary {
+      background: var(--gold);
+      color: var(--ink);
+      border-color: var(--gold);
+    }
+
+    .btn-primary:hover {
+      background: var(--gold-deep);
+      border-color: var(--gold-deep);
+    }
+
+    .btn-dark {
+      background: var(--ink);
+      color: var(--white);
+      border-color: var(--ink);
+    }
+
+    .btn-outline {
+      background: var(--white);
+      color: var(--ink);
+      border-color: var(--ink);
+    }
+
+    .btn-outline.light {
+      background: transparent;
+      color: var(--white);
+      border-color: rgba(255, 255, 255, 0.65);
+    }
+
+    .utility-bar {
+      background: var(--ink);
+      color: var(--white);
+      font-size: 13px;
+      min-height: 38px;
+      display: flex;
+      align-items: center;
+    }
+
+    .utility-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .utility-inner span,
+    .utility-inner a {
+      color: rgba(255, 255, 255, 0.86);
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(255, 255, 255, 0.96);
+      border-bottom: 1px solid var(--fog);
+      backdrop-filter: blur(14px);
+    }
+
+    .nav {
+      height: 74px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 28px;
+    }
+
+    .logo-wrap {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 170px;
+    }
+
+    .logo-wrap img {
+      width: 126px;
+      height: auto;
+      object-fit: contain;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      flex: 1;
+    }
+
+    .nav-links a {
+      padding: 10px 14px;
+      color: var(--ink-soft);
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .menu-toggle {
+      display: none;
+      width: 46px;
+      height: 46px;
+      border: 1px solid var(--fog);
+      border-radius: var(--radius-sm);
+      background: var(--white);
+      cursor: pointer;
+    }
+
+    .menu-toggle span {
+      display: block;
+      width: 20px;
+      height: 2px;
+      background: var(--ink);
+      margin: 5px auto;
+      transition: transform 0.2s ease;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      background:
+        linear-gradient(90deg, rgba(255,255,255,0.94) 0%, rgba(255,255,255,0.82) 48%, rgba(255,255,255,0.16) 100%),
+        url("https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1800&q=80") center/cover no-repeat;
+      min-height: 720px;
+      display: flex;
+      align-items: center;
+    }
+
+    .hero::before,
+    .hero::after {
+      content: "";
+      position: absolute;
+      background: var(--gold);
+      width: 95px;
+      height: 520px;
+      transform: skewX(-18deg) rotate(4deg);
+      opacity: 0.92;
+      z-index: 0;
+    }
+
+    .hero::before {
+      right: 8%;
+      top: 80px;
+    }
+
+    .hero::after {
+      right: 2%;
+      top: 135px;
+      background: var(--blue);
+      width: 26px;
+      opacity: 0.8;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      padding: 96px 0;
+    }
+
+    .hero-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 28px 0 32px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 255, 255, 0.9);
+      border: 1px solid var(--fog);
+      border-radius: var(--radius-md);
+      padding: 8px 12px;
+      font-weight: 750;
+      color: var(--ink);
+      box-shadow: 0 1px 5px rgba(23, 23, 23, 0.06);
+    }
+
+    .badge-dot {
+      width: 8px;
+      height: 8px;
+      background: var(--gold);
+      border-radius: 50%;
+      flex: 0 0 auto;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .hero-note {
+      margin-top: 18px;
+      font-size: 14px;
+      color: var(--graphite);
+    }
+
+    .proof-strip {
+      margin-top: -44px;
+      position: relative;
+      z-index: 3;
+    }
+
+    .proof-card {
+      background: var(--ink);
+      color: var(--white);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-lg);
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      overflow: hidden;
+    }
+
+    .proof-item {
+      padding: 28px 24px;
+      border-right: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .proof-item:last-child {
+      border-right: 0;
+    }
+
+    .proof-item strong {
+      display: block;
+      color: var(--white);
+      font-size: 24px;
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+
+    .proof-item span {
+      color: rgba(255, 255, 255, 0.72);
+      font-size: 14px;
+    }
+
+    .section-head {
+      display: grid;
+      grid-template-columns: minmax(0, 0.85fr) minmax(260px, 0.65fr);
+      gap: 44px;
+      align-items: end;
+      margin-bottom: 38px;
+    }
+
+    .section-head p {
+      font-size: 18px;
+    }
+
+    .problem-grid {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 28px;
+      align-items: stretch;
+    }
+
+    .problem-image {
+      position: relative;
+      min-height: 420px;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      background: url("https://images.unsplash.com/photo-1590474150740-1f795d87d598?auto=format&fit=crop&w=1200&q=80") center/cover no-repeat;
+      box-shadow: var(--shadow);
+    }
+
+    .problem-image::after {
+      content: "Budget-friendly does not mean rushed.";
+      position: absolute;
+      left: 22px;
+      bottom: 22px;
+      max-width: 280px;
+      background: var(--gold);
+      color: var(--ink);
+      padding: 16px 18px;
+      border-radius: var(--radius-md);
+      font-weight: 850;
+      line-height: 1.15;
+      box-shadow: var(--shadow);
+    }
+
+    .problem-copy {
+      background: var(--white);
+      border: 1px solid var(--fog);
+      border-radius: var(--radius-lg);
+      padding: 38px;
+      box-shadow: var(--shadow);
+    }
+
+    .problem-copy h3 {
+      font-size: clamp(28px, 3vw, 38px);
+      margin-bottom: 18px;
+    }
+
+    .pas-list {
+      display: grid;
+      gap: 16px;
+      margin-top: 28px;
+    }
+
+    .pas-item {
+      display: grid;
+      grid-template-columns: 44px 1fr;
+      gap: 14px;
+      align-items: start;
+    }
+
+    .pas-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: var(--radius-md);
+      background: var(--cloud);
+      display: grid;
+      place-items: center;
+      font-weight: 900;
+      color: var(--ink);
+      border: 1px solid var(--fog);
+    }
+
+    .pas-item strong {
+      display: block;
+      font-size: 17px;
+      margin-bottom: 4px;
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .step-card,
+    .service-card,
+    .testimonial-card,
+    .faq-item {
+      background: var(--white);
+      border: 1px solid var(--fog);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow);
+    }
+
+    .step-card {
+      padding: 30px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .step-card::after {
+      content: attr(data-step);
+      position: absolute;
+      right: 22px;
+      top: 12px;
+      font-size: 82px;
+      font-weight: 900;
+      letter-spacing: -0.08em;
+      color: rgba(245, 181, 27, 0.18);
+      line-height: 1;
+    }
+
+    .step-icon {
+      width: 54px;
+      height: 54px;
+      border-radius: var(--radius-md);
+      background: var(--ink);
+      color: var(--white);
+      display: grid;
+      place-items: center;
+      font-size: 22px;
+      margin-bottom: 24px;
+    }
+
+    .step-card h3 {
+      margin-bottom: 12px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .service-card {
+      padding: 28px;
+      min-height: 242px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .service-top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 18px;
+    }
+
+    .service-mark {
+      width: 42px;
+      height: 42px;
+      border-radius: var(--radius-md);
+      background: var(--gold);
+      display: grid;
+      place-items: center;
+      color: var(--ink);
+      font-weight: 950;
+      flex: 0 0 auto;
+    }
+
+    .service-card p {
+      margin-top: 12px;
+    }
+
+    .service-link {
+      margin-top: 26px;
+      color: var(--ink);
+      font-weight: 850;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .cta-band {
+      background: var(--ink);
+      color: var(--white);
+      border-radius: var(--radius-lg);
+      padding: clamp(34px, 5vw, 58px);
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 28px;
+      align-items: center;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .cta-band::after {
+      content: "";
+      position: absolute;
+      right: -40px;
+      top: -60px;
+      width: 180px;
+      height: 360px;
+      background: var(--gold);
+      transform: rotate(18deg);
+      opacity: 0.9;
+    }
+
+    .cta-band > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    .cta-band h2,
+    .cta-band p {
+      color: var(--white);
+    }
+
+    .cta-band p {
+      margin-top: 14px;
+      color: rgba(255, 255, 255, 0.76);
+      max-width: 680px;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr 0.8fr;
+      gap: 22px;
+    }
+
+    .project-card {
+      min-height: 330px;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      position: relative;
+      background: var(--ink);
+      box-shadow: var(--shadow);
+    }
+
+    .project-card:nth-child(1) {
+      grid-row: span 2;
+      min-height: 682px;
+    }
+
+    .project-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.78;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    .project-card:hover img {
+      transform: scale(1.04);
+      opacity: 0.9;
+    }
+
+    .project-caption {
+      position: absolute;
+      inset: auto 18px 18px 18px;
+      background: rgba(255, 255, 255, 0.92);
+      border-radius: var(--radius-md);
+      padding: 16px;
+    }
+
+    .project-caption strong {
+      display: block;
+      font-size: 18px;
+      margin-bottom: 4px;
+    }
+
+    .project-caption span {
+      color: var(--graphite);
+      font-size: 14px;
+    }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .testimonial-card {
+      padding: 26px;
+    }
+
+    .stars {
+      color: var(--gold-deep);
+      letter-spacing: 2px;
+      margin-bottom: 16px;
+      font-size: 16px;
+    }
+
+    .testimonial-card blockquote {
+      color: var(--ink-soft);
+      font-size: 16px;
+      margin-bottom: 18px;
+    }
+
+    .testimonial-card cite {
+      display: block;
+      font-style: normal;
+      font-weight: 850;
+      color: var(--ink);
+    }
+
+    .testimonial-card small {
+      color: var(--graphite);
+    }
+
+    .lead-magnet {
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      gap: 28px;
+      align-items: stretch;
+    }
+
+    .magnet-card {
+      background: var(--ink);
+      color: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 38px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .magnet-card::after {
+      content: "";
+      position: absolute;
+      right: -58px;
+      bottom: -110px;
+      width: 180px;
+      height: 360px;
+      background: var(--gold);
+      transform: rotate(22deg);
+    }
+
+    .magnet-card h2,
+    .magnet-card p {
+      color: var(--white);
+      position: relative;
+      z-index: 1;
+    }
+
+    .magnet-card p {
+      color: rgba(255, 255, 255, 0.75);
+      margin-top: 16px;
+    }
+
+    .quote-form {
+      background: var(--white);
+      border: 1px solid var(--fog);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow);
+      padding: 30px;
+      display: grid;
+      gap: 14px;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    .quote-form input,
+    .quote-form select,
+    .quote-form textarea {
+      width: 100%;
+      border: 1px solid var(--steel);
+      border-radius: var(--radius-sm);
+      padding: 13px 14px;
+      background: var(--white);
+      color: var(--ink);
+      min-height: 46px;
+    }
+
+    .quote-form textarea {
+      min-height: 110px;
+      resize: vertical;
+    }
+
+    .quote-form input:focus,
+    .quote-form select:focus,
+    .quote-form textarea:focus {
+      outline: 2px solid rgba(245, 181, 27, 0.35);
+      border-color: var(--gold-deep);
+    }
+
+    .faq-wrap {
+      display: grid;
+      gap: 12px;
+    }
+
+    .faq-item {
+      overflow: hidden;
+    }
+
+    .faq-question {
+      width: 100%;
+      min-height: 62px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      border: 0;
+      background: var(--white);
+      color: var(--ink);
+      padding: 20px 24px;
+      cursor: pointer;
+      text-align: left;
+      font-weight: 850;
+      font-size: 17px;
+    }
+
+    .faq-question span:last-child {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: var(--cloud);
+      flex: 0 0 auto;
+      transition: transform 0.2s ease;
+    }
+
+    .faq-answer {
+      display: none;
+      padding: 0 24px 22px;
+      color: var(--charcoal);
+    }
+
+    .faq-item.active .faq-answer {
+      display: block;
+    }
+
+    .faq-item.active .faq-question span:last-child {
+      transform: rotate(45deg);
+      background: var(--gold);
+    }
+
+    .footer {
+      background: var(--ink);
+      color: var(--white);
+      padding: 70px 0 34px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.3fr 0.85fr 0.85fr 1fr;
+      gap: 34px;
+      margin-bottom: 42px;
+    }
+
+    .footer-logo {
+      width: 150px;
+      margin-bottom: 18px;
+      background: rgba(255, 255, 255, 0.04);
+      border-radius: var(--radius-md);
+      padding: 8px;
+    }
+
+    .footer h3 {
+      color: var(--white);
+      font-size: 18px;
+      margin-bottom: 16px;
+      letter-spacing: 0;
+    }
+
+    .footer p,
+    .footer a,
+    .footer li {
+      color: rgba(255, 255, 255, 0.72);
+      font-size: 15px;
+    }
+
+    .footer ul {
+      list-style: none;
+      display: grid;
+      gap: 10px;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+      padding-top: 22px;
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      flex-wrap: wrap;
+      color: rgba(255, 255, 255, 0.6);
+      font-size: 13px;
+    }
+
+    .mobile-cta {
+      display: none;
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 80;
+      background: var(--white);
+      border-top: 1px solid var(--fog);
+      box-shadow: 0 -8px 24px rgba(23, 23, 23, 0.12);
+      padding: 10px 12px calc(10px + env(safe-area-inset-bottom));
+      gap: 10px;
+    }
+
+    .mobile-cta a {
+      flex: 1;
+      min-height: 48px;
+      padding-inline: 12px;
+    }
+
+    @media (max-width: 1024px) {
+      .container {
+        width: min(100% - 32px, var(--container));
+      }
+
+      .nav-links,
+      .nav-actions .btn-outline {
+        display: none;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .nav-links.open {
+        position: absolute;
+        left: 16px;
+        right: 16px;
+        top: 75px;
+        display: grid;
+        background: var(--white);
+        border: 1px solid var(--fog);
+        border-radius: var(--radius-lg);
+        box-shadow: var(--shadow-lg);
+        padding: 14px;
+        z-index: 99;
+      }
+
+      .nav-links.open a {
+        min-height: 46px;
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid var(--fog);
+      }
+
+      .nav-links.open a:last-child {
+        border-bottom: 0;
+      }
+
+      .proof-card,
+      .services-grid,
+      .testimonials-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .proof-item:nth-child(2) {
+        border-right: 0;
+      }
+
+      .proof-item:nth-child(1),
+      .proof-item:nth-child(2) {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+      }
+
+      .section-head,
+      .problem-grid,
+      .lead-magnet,
+      .cta-band {
+        grid-template-columns: 1fr;
+      }
+
+      .projects-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .project-card:nth-child(1) {
+        grid-row: auto;
+        grid-column: span 2;
+        min-height: 430px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 767px) {
+      body {
+        padding-bottom: 78px;
+      }
+
+      .section {
+        padding: 56px 0;
+      }
+
+      .utility-inner {
+        justify-content: center;
+        text-align: center;
+      }
+
+      .utility-inner span:last-child {
+        display: none;
+      }
+
+      .nav {
+        height: 68px;
+      }
+
+      .logo-wrap img {
+        width: 108px;
+      }
+
+      .hero {
+        min-height: auto;
+        background:
+          linear-gradient(180deg, rgba(255,255,255,0.96) 0%, rgba(255,255,255,0.9) 55%, rgba(255,255,255,0.58) 100%),
+          url("https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1200&q=78") center/cover no-repeat;
+      }
+
+      .hero::before,
+      .hero::after {
+        display: none;
+      }
+
+      .hero-content {
+        padding: 64px 0 88px;
+      }
+
+      .hero-actions,
+      .form-row {
+        display: grid;
+        grid-template-columns: 1fr;
+      }
+
+      .hero-actions .btn,
+      .quote-form .btn {
+        width: 100%;
+      }
+
+      .proof-strip {
+        margin-top: -54px;
+      }
+
+      .proof-card,
+      .steps,
+      .services-grid,
+      .testimonials-grid,
+      .projects-grid,
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .proof-item {
+        border-right: 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+      }
+
+      .proof-item:last-child {
+        border-bottom: 0;
+      }
+
+      .problem-copy,
+      .quote-form,
+      .magnet-card {
+        padding: 24px;
+      }
+
+      .problem-image {
+        min-height: 310px;
+      }
+
+      .project-card,
+      .project-card:nth-child(1) {
+        grid-column: auto;
+        min-height: 330px;
+      }
+
+      .cta-band {
+        text-align: left;
+      }
+
+      .cta-band .btn {
+        width: 100%;
+      }
+
+      .footer-bottom {
+        display: grid;
+      }
+
+      .mobile-cta {
+        display: flex;
+      }
+    }
+
+    @media (max-width: 420px) {
+      .container {
+        width: min(100% - 24px, var(--container));
+      }
+
+      .hero-badges {
+        display: grid;
+      }
+
+      .badge {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="utility-bar">
+    <div class="container utility-inner">
+      <span>Edmonton & Alberta Asphalt Paving Services</span>
+      <span>Free estimates • Residential • Commercial • Repairs</span>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a class="logo-wrap" href="#top" aria-label="Budget Paving home">
+        <img src="images/logo.png" alt="Budget Paving logo" />
+      </a>
+
+      <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+        <a href="#services">Services</a>
+        <a href="#process">Process</a>
+        <a href="#projects">Projects</a>
+        <a href="#faq">FAQ</a>
+        <a href="#estimate">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a class="btn btn-outline" href="tel:+17800000000">Call Now</a>
+        <a class="btn btn-primary" href="#estimate">Free Estimate</a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-content">
+        <span class="eyebrow">Budget-friendly asphalt. Professional finish.</span>
+        <h1>Edmonton Asphalt Paving Built to Last</h1>
+        <p class="lead">Budget Paving helps homeowners, businesses, acreages, and property managers get smooth, durable asphalt surfaces without overpaying or dealing with a messy, confusing quote process.</p>
+
+        <div class="hero-badges" aria-label="Budget Paving services">
+          <span class="badge"><span class="badge-dot"></span> Driveway paving</span>
+          <span class="badge"><span class="badge-dot"></span> Parking lots</span>
+          <span class="badge"><span class="badge-dot"></span> Asphalt repairs</span>
+          <span class="badge"><span class="badge-dot"></span> Concrete work</span>
+        </div>
+
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#estimate">Request a Free Estimate</a>
+          <a class="btn btn-outline" href="tel:+17800000000">Call Budget Paving</a>
+        </div>
+        <p class="hero-note">Serving Edmonton, St. Albert, Sherwood Park, Spruce Grove, Leduc, Nisku, and surrounding Alberta communities.</p>
+      </div>
+    </section>
+
+    <section class="proof-strip" aria-label="Trust highlights">
+      <div class="container">
+        <div class="proof-card">
+          <div class="proof-item">
+            <strong>Free</strong>
+            <span>No-pressure paving estimates</span>
+          </div>
+          <div class="proof-item">
+            <strong>2-in-1</strong>
+            <span>Asphalt and concrete solutions</span>
+          </div>
+          <div class="proof-item">
+            <strong>Local</strong>
+            <span>Edmonton and Alberta service area</span>
+          </div>
+          <div class="proof-item">
+            <strong>Clean</strong>
+            <span>Prep, paving, finishing, cleanup</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="problem">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Problem → Agitation → Solution</span>
+            <h2>Cracked, uneven asphalt makes every property feel unfinished.</h2>
+          </div>
+          <p>Bad pavement is more than a cosmetic issue. It creates puddles, potholes, rough access, curb-appeal problems, and the fear of paying twice because the base was never prepared properly.</p>
+        </div>
+
+        <div class="problem-grid">
+          <div class="problem-image" role="img" aria-label="Asphalt paving equipment on a road project"></div>
+          <div class="problem-copy">
+            <h3>Get the smooth finish without the inflated price.</h3>
+            <p>Budget Paving focuses on practical paving solutions for driveways, walkways, acreage lanes, small parking areas, commercial lots, asphalt repairs, resurfacing, and concrete improvements.</p>
+
+            <div class="pas-list">
+              <div class="pas-item">
+                <div class="pas-icon">P</div>
+                <div>
+                  <strong>Problem</strong>
+                  <p>Your asphalt is cracking, sinking, pooling water, or making your property look neglected.</p>
+                </div>
+              </div>
+              <div class="pas-item">
+                <div class="pas-icon">A</div>
+                <div>
+                  <strong>Agitation</strong>
+                  <p>Small surface issues can turn into bigger repairs when the base, drainage, or edges are ignored.</p>
+                </div>
+              </div>
+              <div class="pas-item">
+                <div class="pas-icon">S</div>
+                <div>
+                  <strong>Solution</strong>
+                  <p>We inspect the site, recommend the right paving or repair option, prepare the surface, and finish it cleanly for Alberta conditions.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-light" id="process">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">How it works</span>
+            <h2>A simple 3-step paving process.</h2>
+          </div>
+          <p>Know exactly what happens after you request a quote. No guesswork, no pressure, and no confusing contractor language.</p>
+        </div>
+
+        <div class="steps">
+          <article class="step-card" data-step="01">
+            <div class="step-icon">1</div>
+            <h3>Request your estimate</h3>
+            <p>Tell us about your driveway, parking lot, walkway, acreage lane, repair, or resurfacing project.</p>
+          </article>
+          <article class="step-card" data-step="02">
+            <div class="step-icon">2</div>
+            <h3>Site review & plan</h3>
+            <p>We review the surface, drainage, base condition, access, and project scope before recommending the right approach.</p>
+          </article>
+          <article class="step-card" data-step="03">
+            <div class="step-icon">3</div>
+            <h3>Pave, repair & finish</h3>
+            <p>Our crew prepares the area, completes the paving or repair work, cleans up, and leaves a smooth usable surface.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="services">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Paving services</span>
+            <h2>Residential & commercial asphalt paving services.</h2>
+          </div>
+          <p>Built for homeowners, acreage owners, business properties, parking areas, and small-to-medium commercial sites across Edmonton and surrounding Alberta communities.</p>
+        </div>
+
+        <div class="services-grid">
+          <article class="service-card">
+            <div>
+              <div class="service-top">
+                <h3>Driveway Paving</h3>
+                <span class="service-mark">01</span>
+              </div>
+              <p>New asphalt driveways, driveway replacement, widening, and smoother access for residential and acreage properties.</p>
+            </div>
+            <a class="service-link" href="#estimate">Get driveway quote →</a>
+          </article>
+
+          <article class="service-card">
+            <div>
+              <div class="service-top">
+                <h3>Parking Lot Paving</h3>
+                <span class="service-mark">02</span>
+              </div>
+              <p>Commercial parking areas, small lots, entrances, access lanes, and property improvements with durable asphalt finishing.</p>
+            </div>
+            <a class="service-link" href="#estimate">Plan your lot →</a>
+          </article>
+
+          <article class="service-card">
+            <div>
+              <div class="service-top">
+                <h3>Asphalt Repair</h3>
+                <span class="service-mark">03</span>
+              </div>
+              <p>Pothole repair, patching, low spots, edge repairs, cracks, and surface damage before it becomes a larger issue.</p>
+            </div>
+            <a class="service-link" href="#estimate">Fix asphalt →</a>
+          </article>
+
+          <article class="service-card">
+            <div>
+              <div class="service-top">
+                <h3>Resurfacing & Overlay</h3>
+                <span class="service-mark">04</span>
+              </div>
+              <p>Improve existing asphalt with resurfacing or overlay options when full replacement is not the best first move.</p>
+            </div>
+            <a class="service-link" href="#estimate">Ask about overlay →</a>
+          </article>
+
+          <article class="service-card">
+            <div>
+              <div class="service-top">
+                <h3>Sealcoating & Maintenance</h3>
+                <span class="service-mark">05</span>
+              </div>
+              <p>Protect asphalt surfaces from weathering, water penetration, oxidation, and everyday wear with maintenance planning.</p>
+            </div>
+            <a class="service-link" href="#estimate">Protect asphalt →</a>
+          </article>
+
+          <article class="service-card">
+            <div>
+              <div class="service-top">
+                <h3>Concrete & Site Prep</h3>
+                <span class="service-mark">06</span>
+              </div>
+              <p>Concrete paving, walkways, grading, base preparation, and property improvement work connected to paving projects.</p>
+            </div>
+            <a class="service-link" href="#estimate">Discuss project →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-light">
+      <div class="container">
+        <div class="cta-band">
+          <div>
+            <h2>Not sure if you need repair, resurfacing, or full replacement?</h2>
+            <p>Start with a free estimate. We’ll help you choose the practical option for your surface, budget, timeline, and property use.</p>
+          </div>
+          <a class="btn btn-primary" href="#estimate">Get Free Estimate</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Project types</span>
+            <h2>Smoother surfaces for homes, lots, lanes, and businesses.</h2>
+          </div>
+          <p>Use these image cards for real Budget Paving project photos later. Replace the stock images with actual job-site photos for stronger trust and local SEO.</p>
+        </div>
+
+        <div class="projects-grid">
+          <article class="project-card">
+            <img loading="lazy" src="https://images.unsplash.com/photo-1571845074377-ecd5afcff4fe?auto=format&fit=crop&w=1000&q=80" alt="Fresh asphalt driveway paving project" />
+            <div class="project-caption">
+              <strong>Driveway paving</strong>
+              <span>Smooth access, cleaner curb appeal, durable finish.</span>
+            </div>
+          </article>
+          <article class="project-card">
+            <img loading="lazy" src="https://images.unsplash.com/photo-1581094373923-040593d33b58?auto=format&fit=crop&w=900&q=80" alt="Commercial asphalt parking lot work" />
+            <div class="project-caption">
+              <strong>Parking areas</strong>
+              <span>Better access and cleaner business frontage.</span>
+            </div>
+          </article>
+          <article class="project-card">
+            <img loading="lazy" src="https://images.unsplash.com/photo-1517581177682-a085bb7ffb38?auto=format&fit=crop&w=900&q=80" alt="Acreage lane and road paving" />
+            <div class="project-caption">
+              <strong>Acreage lanes</strong>
+              <span>Less mud, dust, and rough entry points.</span>
+            </div>
+          </article>
+          <article class="project-card">
+            <img loading="lazy" src="https://images.unsplash.com/photo-1593115057322-e94b77572f20?auto=format&fit=crop&w=900&q=80" alt="Asphalt repair and maintenance work" />
+            <div class="project-caption">
+              <strong>Repairs & overlays</strong>
+              <span>Practical fixes before damage spreads.</span>
+            </div>
+          </article>
+          <article class="project-card">
+            <img loading="lazy" src="https://images.unsplash.com/photo-1596993166709-82e2e7e067d5?auto=format&fit=crop&w=900&q=80" alt="Concrete and paving site preparation" />
+            <div class="project-caption">
+              <strong>Concrete & prep</strong>
+              <span>Base, grading, and finish details matter.</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-light" id="testimonials">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Client stories</span>
+            <h2>Specific paving results customers care about.</h2>
+          </div>
+          <p>Replace these sample testimonials with real reviews when available. Keep the structure: before problem, what changed, specific outcome.</p>
+        </div>
+
+        <div class="testimonials-grid">
+          <article class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <blockquote>“Our driveway had deep cracks and water pooling near the garage. Budget Paving explained the repair options clearly, reworked the low area, and the finished surface drains properly now.”</blockquote>
+            <cite>Residential driveway client</cite>
+            <small>Edmonton area</small>
+          </article>
+
+          <article class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <blockquote>“The entrance to our small commercial lot was rough enough that customers complained. After the asphalt repair and resurfacing, the lot looks cleaner and cars enter without scraping.”</blockquote>
+            <cite>Commercial property owner</cite>
+            <small>St. Albert area</small>
+          </article>
+
+          <article class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <blockquote>“We wanted a better acreage lane without going over budget. The crew helped us plan the base and paving work, and the lane is much easier to maintain after rain.”</blockquote>
+            <cite>Acreage homeowner</cite>
+            <small>Surrounding Alberta community</small>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="estimate">
+      <div class="container">
+        <div class="lead-magnet">
+          <div class="magnet-card">
+            <span class="eyebrow">Free estimate + prep checklist</span>
+            <h2>Get a practical paving recommendation before you commit.</h2>
+            <p>Tell us what surface you need help with. We’ll review your project and help you understand whether repair, resurfacing, replacement, or concrete work makes the most sense.</p>
+          </div>
+
+          <form class="quote-form" action="#" method="post">
+            <div class="form-row">
+              <input type="text" name="name" placeholder="Full name" required />
+              <input type="tel" name="phone" placeholder="Phone number" required />
+            </div>
+            <div class="form-row">
+              <input type="email" name="email" placeholder="Email address" />
+              <select name="service" required>
+                <option value="">Project type</option>
+                <option>Driveway paving</option>
+                <option>Parking lot paving</option>
+                <option>Asphalt repair</option>
+                <option>Resurfacing / overlay</option>
+                <option>Sealcoating / maintenance</option>
+                <option>Concrete / site prep</option>
+              </select>
+            </div>
+            <input type="text" name="location" placeholder="Project location / city" />
+            <textarea name="message" placeholder="Tell us about the surface, size, current problem, and timeline."></textarea>
+            <button class="btn btn-primary" type="submit">Request Free Estimate</button>
+            <p style="font-size: 13px; color: var(--graphite);">This form is a front-end placeholder. Connect it to your email, CRM, or form handler before launch.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-light" id="faq">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">FAQ</span>
+            <h2>Questions people ask before hiring a paving contractor.</h2>
+          </div>
+          <p>These answers are written for both human visitors and AI search engines, using clear, direct language around Edmonton asphalt paving intent.</p>
+        </div>
+
+        <div class="faq-wrap">
+          <div class="faq-item active">
+            <button class="faq-question" type="button"><span>How much does asphalt paving cost in Edmonton?</span><span>+</span></button>
+            <div class="faq-answer">Asphalt paving cost depends on the project size, base condition, access, grading, thickness, repair needs, and whether the job is a driveway, parking lot, acreage lane, or resurfacing project. The best way to price it accurately is with a site review and free estimate.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" type="button"><span>Should I repair, resurface, or replace my asphalt?</span><span>+</span></button>
+            <div class="faq-answer">Small cracks, potholes, and isolated low spots may be repairable. If the surface is worn but the base is still stable, resurfacing or overlay may work. If the base is failing, full replacement may be the better long-term option.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" type="button"><span>Do you handle residential and commercial paving?</span><span>+</span></button>
+            <div class="faq-answer">Yes. Budget Paving can position services for residential driveways, acreage lanes, commercial parking areas, small lots, walkways, asphalt repairs, resurfacing, and concrete-related property improvements.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" type="button"><span>When is the best season for paving in Alberta?</span><span>+</span></button>
+            <div class="faq-answer">Most asphalt paving is planned during warmer months when ground and air temperatures allow better installation and compaction. Spring, summer, and early fall are typically the main paving windows.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" type="button"><span>How long before I can use a newly paved driveway?</span><span>+</span></button>
+            <div class="faq-answer">Timing depends on weather, asphalt thickness, project type, and site conditions. Your contractor should give you specific instructions after installation so the new surface has time to settle properly before regular use.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" type="button"><span>What areas does Budget Paving serve?</span><span>+</span></button>
+            <div class="faq-answer">This draft targets Edmonton and surrounding Alberta communities including St. Albert, Sherwood Park, Spruce Grove, Stony Plain, Leduc, Nisku, Fort Saskatchewan, Morinville, Beaumont, and nearby areas. Confirm the final service area before publishing.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <img class="footer-logo" src="images/logo.png" alt="Budget Paving logo" />
+          <p>Budget Paving provides practical asphalt and concrete paving solutions for homeowners, businesses, acreage owners, and property managers across Edmonton and surrounding Alberta communities.</p>
+        </div>
+
+        <div>
+          <h3>Services</h3>
+          <ul>
+            <li><a href="#services">Asphalt paving</a></li>
+            <li><a href="#services">Driveway paving</a></li>
+            <li><a href="#services">Parking lot paving</a></li>
+            <li><a href="#services">Asphalt repair</a></li>
+            <li><a href="#services">Concrete work</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Service Areas</h3>
+          <ul>
+            <li>Edmonton</li>
+            <li>St. Albert</li>
+            <li>Sherwood Park</li>
+            <li>Spruce Grove</li>
+            <li>Leduc & nearby areas</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Get a Quote</h3>
+          <ul>
+            <li><a href="tel:+17800000000">Phone: +1 780 000 0000</a></li>
+            <li><a href="mailto:info@budgetpaving.ca">info@budgetpaving.ca</a></li>
+            <li><a href="#estimate">Request a free estimate</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 Budget Paving. All rights reserved.</span>
+        <span>Asphalt paving company in Edmonton, Alberta.</span>
+      </div>
+    </div>
+  </footer>
+
+  <div class="mobile-cta" aria-label="Mobile quick contact">
+    <a class="btn btn-dark" href="tel:+17800000000">Call</a>
+    <a class="btn btn-primary" href="#estimate">Free Estimate</a>
+  </div>
+
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+
+    menuToggle.addEventListener('click', () => {
+      const isOpen = navLinks.classList.toggle('open');
+      menuToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+
+    navLinks.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+        menuToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    document.querySelectorAll('.faq-question').forEach((button) => {
+      button.addEventListener('click', () => {
+        const item = button.closest('.faq-item');
+        item.classList.toggle('active');
+      });
+    });
+  </script>
+</body>
+</html>
