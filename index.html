@@ -275,6 +275,67 @@
       box-shadow: 0 8px 24px rgba(23, 23, 23, 0.08);
     }
 
+    .desktop-brand-row {
+      height: 132px;
+      display: flex;
+      align-items: center;
+      background: var(--white);
+      border-bottom: 1px solid var(--fog);
+      overflow: hidden;
+      transition: height 0.28s ease, opacity 0.22s ease, border-color 0.22s ease;
+    }
+
+    .brand-row-inner {
+      display: grid;
+      grid-template-columns: 260px 1fr 190px;
+      gap: 36px;
+      align-items: center;
+    }
+
+    .brand-row-logo img {
+      width: 230px;
+      height: 112px;
+      object-fit: contain;
+      object-position: left center;
+      display: block;
+    }
+
+    .brand-row-details {
+      text-align: center;
+      display: grid;
+      gap: 8px;
+      color: var(--ink);
+    }
+
+    .brand-row-details strong {
+      font-size: 18px;
+      line-height: 1.2;
+    }
+
+    .brand-row-details span,
+    .brand-row-details a {
+      color: var(--charcoal);
+      font-size: 15px;
+      font-weight: 650;
+    }
+
+    .site-header:not(.scrolled) .nav {
+      height: 64px;
+    }
+
+    .site-header:not(.scrolled) .nav .logo-wrap,
+    .site-header:not(.scrolled) .nav-actions {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+    }
+
+    .site-header.scrolled .desktop-brand-row {
+      height: 0;
+      opacity: 0;
+      border-bottom-color: transparent;
+    }
+
     .site-header.scrolled .nav {
       height: 96px;
     }
@@ -1041,6 +1102,21 @@
     }
 
     @media (max-width: 1024px) {
+      .desktop-brand-row {
+        display: none;
+      }
+
+      .site-header:not(.scrolled) .nav {
+        height: 76px;
+      }
+
+      .site-header:not(.scrolled) .nav .logo-wrap,
+      .site-header:not(.scrolled) .nav-actions {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+      }
+
       .site-header.scrolled .nav {
         height: 76px;
       }
@@ -1263,6 +1339,21 @@
   </div>
 
   <header class="site-header">
+    <div class="desktop-brand-row">
+      <div class="container brand-row-inner">
+        <a class="brand-row-logo" href="#top" aria-label="Budget Paving home">
+          <img src="images/logo.svg" alt="Budget Paving logo" />
+        </a>
+
+        <div class="brand-row-details" aria-label="Budget Paving contact details">
+          <strong>31 Rayborn Crescent, St. Albert, AB</strong>
+          <span>Call: <a href="tel:+17809457860">+1 (780) 945-7860</a> • Email: <a href="mailto:info@budgetpaving.ca">info@budgetpaving.ca</a></span>
+        </div>
+
+        <a class="btn btn-primary" href="#estimate">Free Estimate</a>
+      </div>
+    </div>
+
     <div class="container nav">
       <a class="logo-wrap" href="#top" aria-label="Budget Paving home">
         <img src="images/logo.svg" alt="Budget Paving logo" />
