@@ -250,10 +250,25 @@
       background: rgba(255, 255, 255, 0.96);
       border-bottom: 1px solid var(--fog);
       backdrop-filter: blur(14px);
+      transition: box-shadow 0.28s ease;
+    }
+
+    .site-header.scrolled {
+      box-shadow: 0 8px 24px rgba(23, 23, 23, 0.08);
+    }
+
+    .site-header.scrolled .nav {
+      height: 96px;
+    }
+
+    .site-header.scrolled .logo-wrap img {
+      width: 184px;
+      height: 84px;
     }
 
     .nav {
-      height: 96px;
+      height: 144px;
+      transition: height 0.28s ease;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -271,8 +286,9 @@
     }
 
     .logo-wrap img {
-      width: 184px;
-      height: 84px;
+      width: 250px;
+      height: 124px;
+      transition: width 0.28s ease, height 0.28s ease;
       object-fit: contain;
       object-position: left center;
       display: block;
@@ -976,6 +992,15 @@
     }
 
     @media (max-width: 1024px) {
+      .site-header.scrolled .nav {
+        height: 76px;
+      }
+
+      .site-header.scrolled .logo-wrap img {
+        width: 132px;
+        height: 62px;
+      }
+
       .container {
         width: min(100% - 32px, var(--container));
       }
@@ -1634,8 +1659,20 @@
   </div>
 
   <script>
+    const siteHeader = document.querySelector('.site-header');
     const menuToggle = document.getElementById('menuToggle');
     const navLinks = document.getElementById('navLinks');
+
+    const updateHeaderOnScroll = () => {
+      if (window.scrollY > 24) {
+        siteHeader.classList.add('scrolled');
+      } else {
+        siteHeader.classList.remove('scrolled');
+      }
+    };
+
+    updateHeaderOnScroll();
+    window.addEventListener('scroll', updateHeaderOnScroll, { passive: true });
 
     menuToggle.addEventListener('click', () => {
       const isOpen = navLinks.classList.toggle('open');
