@@ -223,14 +223,19 @@
     .logo-wrap {
       display: flex;
       align-items: center;
+      justify-content: flex-start;
       gap: 12px;
       min-width: 170px;
+      height: 100%;
+      overflow: visible;
     }
 
     .logo-wrap img {
-      width: 126px;
-      height: auto;
+      width: 132px;
+      height: 58px;
       object-fit: contain;
+      object-position: left center;
+      display: block;
     }
 
     .nav-links {
@@ -857,12 +862,25 @@
       margin-bottom: 42px;
     }
 
-    .footer-logo {
-      width: 150px;
+    .footer-logo-wrap {
+      width: 164px;
+      height: 118px;
       margin-bottom: 18px;
       background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.08);
       border-radius: var(--radius-md);
-      padding: 8px;
+      padding: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .footer-logo {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
     }
 
     .footer h3 {
@@ -1015,7 +1033,8 @@
       }
 
       .logo-wrap img {
-        width: 108px;
+        width: 112px;
+        height: 52px;
       }
 
       .hero {
@@ -1523,7 +1542,9 @@
     <div class="container">
       <div class="footer-grid">
         <div>
-          <img class="footer-logo" src="images/logo.svg" alt="Budget Paving logo" />
+          <div class="footer-logo-wrap">
+            <img class="footer-logo" src="images/logo.svg" alt="Budget Paving logo" />
+          </div>
           <p>Budget Paving provides practical asphalt and concrete paving solutions for homeowners, businesses, acreage owners, and property managers across Edmonton and surrounding Alberta communities.</p>
         </div>
 
