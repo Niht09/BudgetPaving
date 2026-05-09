@@ -1483,8 +1483,8 @@
     <section class="hero">
       <div class="container hero-content">
         <span class="eyebrow">Budget-friendly asphalt. Professional finish.</span>
-        <h1>Edmonton Asphalt Paving Built to Last</h1>
-        <p class="lead">Budget Paving helps homeowners, businesses, acreages, and property managers get smooth, durable asphalt surfaces without overpaying or dealing with a messy, confusing quote process.</p>
+        <h1 data-ab="hero-title">Edmonton Asphalt Paving Built to Last</h1>
+        <p class="lead" data-ab="hero-subtitle">Budget Paving helps homeowners, businesses, acreages, and property managers get smooth, durable asphalt surfaces without overpaying or dealing with a messy, confusing quote process.</p>
 
         <div class="hero-badges" aria-label="Budget Paving services">
           <span class="badge"><span class="badge-dot"></span> Driveway paving</span>
@@ -1494,7 +1494,7 @@
         </div>
 
         <div class="hero-actions">
-          <a class="btn btn-primary" href="#estimate">Request a Free Estimate</a>
+          <a class="btn btn-primary" href="#estimate" data-ab="hero-cta">Request a Free Estimate</a>
         </div>
         <p class="hero-note">Serving Edmonton, St. Albert, Sherwood Park, Spruce Grove, Leduc, Nisku, and surrounding Alberta communities.</p>
       </div>
@@ -1502,7 +1502,7 @@
 
     <section class="proof-strip" aria-label="Trust highlights">
       <div class="container">
-        <div class="proof-card">
+        <div class="proof-card" aria-label="Budget Paving trust signals">
           <div class="proof-item">
             <strong>Free</strong>
             <span>No-pressure paving estimates</span>
@@ -1598,6 +1598,15 @@
     </section>
 
     <section class="section" id="services">
+      <div class="container" style="margin-bottom:42px;">
+        <div style="display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:center;padding:18px 22px;border:1px solid var(--fog);border-radius:var(--radius-lg);background:var(--cloud);box-shadow:var(--shadow);">
+          <span class="badge"><span class="badge-dot"></span> Local Edmonton paving contractor</span>
+          <span class="badge"><span class="badge-dot"></span> Residential & commercial asphalt paving</span>
+          <span class="badge"><span class="badge-dot"></span> Asphalt repair & resurfacing</span>
+          <span class="badge"><span class="badge-dot"></span> Free paving estimates</span>
+          <span class="badge"><span class="badge-dot"></span> Alberta weather-ready surfaces</span>
+        </div>
+      </div>
       <div class="container">
         <div class="section-head">
           <div>
@@ -1740,6 +1749,41 @@
     </section>
 
     <section class="section section-light" id="testimonials">
+      <div class="container" style="margin-bottom:48px;">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Visual proof</span>
+            <h2>Before & after paving transformations build trust fast.</h2>
+          </div>
+          <p>High-ticket paving projects depend on visible proof. These image layouts are designed for future real Budget Paving project photography, helping homeowners and property managers instantly visualize the upgrade.</p>
+        </div>
+
+        <div class="projects-grid">
+          <article class="project-card">
+            <img loading="lazy" src="https://images.unsplash.com/photo-1517022812141-23620dba5c23?auto=format&fit=crop&w=1200&q=85" alt="Freshly paved asphalt driveway in Edmonton" />
+            <div class="project-caption">
+              <strong>Driveway transformation</strong>
+              <span>From cracked asphalt to smooth finished paving.</span>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <img loading="lazy" src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=900&q=85" alt="Commercial asphalt resurfacing project" />
+            <div class="project-caption">
+              <strong>Commercial resurfacing</strong>
+              <span>Cleaner access and stronger first impressions.</span>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <img loading="lazy" src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=900&q=85" alt="Acreage lane paving in Alberta" />
+            <div class="project-caption">
+              <strong>Acreage paving</strong>
+              <span>Reduced dust, mud, and rough access points.</span>
+            </div>
+          </article>
+        </div>
+      </div>
       <div class="container">
         <div class="section-head">
           <div>
@@ -1804,6 +1848,11 @@
             <textarea name="message" placeholder="Tell us about the surface, size, current problem, and timeline."></textarea>
             <button class="btn btn-primary" type="submit">Request Free Estimate</button>
             <p style="font-size: 13px; color: var(--graphite);">This form is a front-end placeholder. Connect it to your email, CRM, or form handler before launch.</p>
+            <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:8px;">
+              <span class="badge"><span class="badge-dot"></span> Free estimates</span>
+              <span class="badge"><span class="badge-dot"></span> Fast response</span>
+              <span class="badge"><span class="badge-dot"></span> Edmonton & Alberta service area</span>
+            </div>
           </form>
         </div>
       </div>
@@ -1935,6 +1984,55 @@
   </div>
 
   <script>
+    const abTests = {
+      A: {
+        title: 'Edmonton Asphalt Paving Built to Last',
+        subtitle: 'Budget Paving helps homeowners, businesses, acreages, and property managers get smooth, durable asphalt surfaces without overpaying or dealing with a messy, confusing quote process.',
+        cta: 'Request a Free Estimate'
+      },
+      B: {
+        title: 'Smooth Asphalt Paving Without Overpaying',
+        subtitle: 'Get driveway paving, parking lot paving, asphalt repair, resurfacing, and concrete work from a local Edmonton-area paving team focused on value, durability, and clean results.',
+        cta: 'Get My Free Paving Quote'
+      }
+    };
+
+    const getABVariant = () => {
+      let variant = localStorage.getItem('budgetPavingHeroVariant');
+      if (!variant) {
+        variant = Math.random() < 0.5 ? 'A' : 'B';
+        localStorage.setItem('budgetPavingHeroVariant', variant);
+      }
+      return variant;
+    };
+
+    const applyABTest = () => {
+      const variant = getABVariant();
+      const test = abTests[variant];
+      const title = document.querySelector('[data-ab="hero-title"]');
+      const subtitle = document.querySelector('[data-ab="hero-subtitle"]');
+      const cta = document.querySelector('[data-ab="hero-cta"]');
+
+      if (title) title.textContent = test.title;
+      if (subtitle) subtitle.textContent = test.subtitle;
+      if (cta) cta.textContent = test.cta;
+
+      document.documentElement.setAttribute('data-ab-hero', variant);
+      console.log('Budget Paving Hero A/B Variant:', variant);
+    };
+
+    applyABTest();
+
+    document.querySelectorAll('[data-ab="hero-cta"], .nav-actions .btn-primary, .mobile-cta .btn-primary').forEach((button) => {
+      button.addEventListener('click', () => {
+        console.log('Budget Paving CTA Click:', {
+          variant: localStorage.getItem('budgetPavingHeroVariant'),
+          label: button.textContent.trim(),
+          location: button.closest('.hero') ? 'hero' : button.closest('.mobile-cta') ? 'mobile-sticky' : 'header'
+        });
+      });
+    });
+
     const siteHeader = document.querySelector('.site-header');
     const menuToggle = document.getElementById('menuToggle');
     const navLinks = document.getElementById('navLinks');
