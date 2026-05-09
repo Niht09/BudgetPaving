@@ -342,6 +342,21 @@
       display: none;
     }
 
+    .site-header:not(.scrolled) .nav {
+      height: 82px;
+      justify-content: center;
+    }
+
+    .site-header:not(.scrolled) .nav .logo-wrap,
+    .site-header:not(.scrolled) .nav .nav-actions {
+      display: none;
+    }
+
+    .site-header:not(.scrolled) .nav-links {
+      flex: 0 1 auto;
+      width: auto;
+    }
+
     .desktop-brand-row {
       height: 132px;
       display: flex;
@@ -1186,6 +1201,16 @@
     @media (max-width: 1024px) {
       .desktop-brand-bar {
         display: none;
+      }
+
+      .site-header:not(.scrolled) .nav {
+        height: 76px;
+        justify-content: space-between;
+      }
+
+      .site-header:not(.scrolled) .nav .logo-wrap,
+      .site-header:not(.scrolled) .nav .nav-actions {
+        display: flex;
       }
 
       .desktop-brand-row {
