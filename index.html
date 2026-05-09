@@ -6,6 +6,9 @@
   <title>Budget Paving | Asphalt Paving Company in Edmonton</title>
   <meta name="description" content="Budget Paving provides residential and commercial asphalt paving, driveway paving, parking lot paving, resurfacing, pothole repair, crack sealing, sealcoating, and concrete paving services in Edmonton and surrounding Alberta areas." />
   <meta name="keywords" content="asphalt paving Edmonton, paving company Edmonton, driveway paving Edmonton, parking lot paving Edmonton, asphalt repair Edmonton, asphalt resurfacing Edmonton, asphalt contractors Edmonton" />
+  <link rel="icon" type="image/svg+xml" href="images/logo.svg" />
+  <link rel="shortcut icon" href="images/logo.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="images/logo.svg" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -69,6 +72,7 @@
 
     .container {
       width: min(100% - 40px, var(--container));
+      max-width: var(--container);
       margin-inline: auto;
     }
 
@@ -293,6 +297,15 @@
       gap: 32px;
     }
 
+    .desktop-brand-logo {
+      width: 260px;
+      height: 132px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      overflow: visible;
+    }
+
     .desktop-brand-logo img {
       width: 250px;
       height: 124px;
@@ -394,6 +407,11 @@
       height: 96px;
     }
 
+    .site-header.scrolled .logo-wrap {
+      width: 190px;
+      min-width: 190px;
+    }
+
     .site-header.scrolled .logo-wrap img {
       width: 184px;
       height: 84px;
@@ -402,6 +420,7 @@
     .nav {
       height: 144px;
       transition: none;
+      min-width: 0;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -411,11 +430,13 @@
     .logo-wrap {
       display: flex;
       align-items: center;
-      justify-content: flex-start;
+      justify-content: center;
       gap: 12px;
-      min-width: 170px;
+      min-width: 190px;
+      width: 190px;
       height: 100%;
       overflow: visible;
+      flex: 0 0 auto;
     }
 
     .logo-wrap img {
@@ -448,10 +469,12 @@
       justify-content: flex-end;
       gap: 10px;
       margin-left: auto;
+      min-width: 0;
     }
 
     .menu-toggle {
       display: none;
+      flex: 0 0 46px;
       width: 46px;
       height: 46px;
       border: 1px solid var(--fog);
@@ -1171,6 +1194,9 @@
 
       .site-header:not(.scrolled) .nav {
         height: 76px;
+        padding-left: 20px;
+        padding-right: 20px;
+        gap: 10px;
       }
 
       .site-header:not(.scrolled) .nav .logo-wrap,
@@ -1184,9 +1210,33 @@
         height: 76px;
       }
 
-      .site-header.scrolled .logo-wrap img {
-        width: 132px;
-        height: 62px;
+      .site-header.scrolled .logo-wrap {
+        width: 142px;
+        min-width: 142px;
+      }
+
+      .site-header.scrolled .logo-wrap {
+        width: 112px;
+        min-width: 112px;
+        justify-content: flex-start;
+      }
+
+      .logo-wrap img {
+        width: 104px;
+        height: 58px;
+      }
+
+      .nav-actions {
+        gap: 8px;
+        flex: 1 1 auto;
+      }
+
+      .nav-actions .btn-primary {
+        margin-left: auto;
+        min-width: 0;
+        padding-left: 18px;
+        padding-right: 18px;
+        font-size: 13px;
       }
 
       .container {
@@ -1204,9 +1254,9 @@
 
       .nav-links.open {
         position: absolute;
-        left: 16px;
-        right: 16px;
-        top: 97px;
+        left: 12px;
+        right: 12px;
+        top: 77px;
         display: grid;
         background: var(--white);
         border: 1px solid var(--fog);
@@ -1265,6 +1315,25 @@
     }
 
     @media (max-width: 767px) {
+      html,
+      body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+      }
+
+      .container {
+        width: 100%;
+        max-width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+
+      .utility-bar,
+      .site-header {
+        width: 100%;
+      }
+
       body {
         padding-bottom: 78px;
       }
@@ -1276,6 +1345,8 @@
       .utility-inner {
         justify-content: center;
         text-align: center;
+        padding-left: 12px;
+        padding-right: 12px;
       }
 
       .utility-inner span:last-child {
@@ -1379,7 +1450,31 @@
 
     @media (max-width: 420px) {
       .container {
-        width: min(100% - 24px, var(--container));
+        width: 100%;
+        max-width: 100%;
+        padding-left: 16px;
+        padding-right: 16px;
+      }
+
+      .nav {
+        padding-left: 14px;
+        padding-right: 14px;
+      }
+
+      .logo-wrap {
+        width: 96px;
+        min-width: 96px;
+      }
+
+      .logo-wrap img {
+        width: 92px;
+        height: 54px;
+      }
+
+      .nav-actions .btn-primary {
+        padding-left: 14px;
+        padding-right: 14px;
+        font-size: 12px;
       }
 
       .hero-badges {
